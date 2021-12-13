@@ -15,6 +15,9 @@
 		BFCC1F4A2766EFA200EB84F9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC1F452766EFA200EB84F9 /* Home.swift */; };
 		BFCC1F4B2766EFA200EB84F9 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC1F462766EFA200EB84F9 /* SignUp.swift */; };
 		BFCC1F4C2766EFA200EB84F9 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC1F472766EFA200EB84F9 /* LoginScreen.swift */; };
+		BFCC1F542766F76300EB84F9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC1F532766F76300EB84F9 /* CircleImage.swift */; };
+		BFCC1F5C2766F76C00EB84F9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC1F5B2766F76C00EB84F9 /* MapView.swift */; };
+		BFCC1F612766F7B100EB84F9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC1F602766F7B100EB84F9 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BFCC1F452766EFA200EB84F9 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BFCC1F462766EFA200EB84F9 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		BFCC1F472766EFA200EB84F9 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		BFCC1F532766F76300EB84F9 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		BFCC1F5B2766F76C00EB84F9 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BFCC1F602766F7B100EB84F9 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 		BFCC1F402766EFA200EB84F9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BFCC1F532766F76300EB84F9 /* CircleImage.swift */,
+				BFCC1F5B2766F76C00EB84F9 /* MapView.swift */,
 				BFCC1F412766EFA200EB84F9 /* Common.swift */,
 			);
 			path = Common;
@@ -133,6 +141,7 @@
 		BFCC1F442766EFA200EB84F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BFCC1F602766F7B100EB84F9 /* HomeView.swift */,
 				BFCC1F452766EFA200EB84F9 /* Home.swift */,
 				BFCC1F462766EFA200EB84F9 /* SignUp.swift */,
 				BFCC1F472766EFA200EB84F9 /* LoginScreen.swift */,
@@ -270,8 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFCC1F492766EFA200EB84F9 /* Controller.swift in Sources */,
+				BFCC1F5C2766F76C00EB84F9 /* MapView.swift in Sources */,
 				BFCC1F482766EFA200EB84F9 /* Common.swift in Sources */,
 				BFCC1F4A2766EFA200EB84F9 /* Home.swift in Sources */,
+				BFCC1F542766F76300EB84F9 /* CircleImage.swift in Sources */,
+				BFCC1F612766F7B100EB84F9 /* HomeView.swift in Sources */,
 				BFCC1F102766EF2F00EB84F9 /* instagrammApp.swift in Sources */,
 				BFCC1F4B2766EFA200EB84F9 /* SignUp.swift in Sources */,
 				BFCC1F4C2766EFA200EB84F9 /* LoginScreen.swift in Sources */,
