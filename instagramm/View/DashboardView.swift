@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct Dashboard: View {
     
     @State var selectedIndex = 0
     
@@ -29,7 +29,7 @@ struct Home: View {
                 
                 Image("plus_unselected")
                 
-                Image("list")
+                Image(systemName: "message")
             }
             .padding(.horizontal, 16)
             
@@ -37,7 +37,7 @@ struct Home: View {
                 
                 switch selectedIndex {
                 case 0:
-                    Color.yellow.edgesIgnoringSafeArea(.top)
+                    HomeView()
                 case 1:
                     Color.black.edgesIgnoringSafeArea(.top)
                 case 2:

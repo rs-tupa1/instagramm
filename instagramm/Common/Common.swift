@@ -14,11 +14,10 @@ enum TypeInput {
 }
 
 struct CustomTextField: View {
-    let placeholder: String
+    var placeholder: String
     var isPass: Bool = false
-    var type: TypeInput = TypeInput.text
-    @Binding var isInputValid : Bool
     @Binding var text: String
+    var errorText: String = ""
     
     var body: some View {
         
@@ -31,69 +30,40 @@ struct CustomTextField: View {
                         .foregroundColor(.white).opacity(0.5)
                         .padding(.leading)
                 }
-                if isPass {
-                    
-                    SecureField(
-                        "",
-                        text: self.$text
-                    )
-                    .onChange(of: text, perform: onChanged)
-                    .padding()
-                    .colorMultiply(.white)
-                    .background(Color.white.opacity(0.1))
-                    .foregroundColor(Color.white)
-                } else {
-                    
-                    TextField(
-                        "",
-                        text: self.$text
-                    )
-                    .onChange(of: text, perform: onChanged)
-                    .padding()
-                    .colorMultiply(.white)
-                    .background(Color.white.opacity(0.1))
-                    .foregroundColor(Color.white)
+                Group {
+                    if isPass {
+                        SecureField(
+                            "",
+                            text: self.$text
+                        )
+                    } else {
+                        TextField(
+                            "",
+                            text: self.$text
+                        )
+                        
+                    }
                 }
+                .padding()
+                .colorMultiply(.white)
+                .background(Color.white.opacity(0.1))
+                .foregroundColor(Color.white)
             }
             
-            if !self.isInputValid {
-                
-                switch self.type {
-                case TypeInput.email:
-                    
-                    Text("Email is Not Valid")
-                        .foregroundColor(Color.red)
-                case TypeInput.password:
-                    
-                    Text("Password minimum 6 characters")
-                        .foregroundColor(Color.red)
-                case .text:
-                    
-                    Text("Can't be left empty")
-                        .foregroundColor(Color.red)
-                }
-            }
-        }
-    }
-    
-    func onChanged(value:String) {
-        if textFieldValidatorEmail(value: self.text, type: self.type) {
-            
-            self.isInputValid = true
-        } else {
-            self.isInputValid = false
+            TextCommon(text: errorText, color: Color.red)
         }
     }
 }
 
 struct BorderButtonStyle: ButtonStyle {
+    var isActive: Bool = false
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .font(.headline)
             .frame(maxWidth: .infinity, maxHeight: 50, alignment: .center)
             .contentShape(Rectangle())
-            .background(Color.purple.opacity(0.3))
+            .background(isActive ? Color.purple.opacity(0.3) : Color.gray.opacity(0.5))
         
     }
 }

@@ -13,12 +13,12 @@ struct HomeView: View {
     @State var current: Post!
     
     @State var data = [
-    
-        Post(id: 0, name: "Nam", image: "image1", seen: false, loading: false, picShow: "image6"),
-        Post(id: 1, name: "Hung", image: "image2", seen: false, loading: false, picShow: "image7"),
-        Post(id: 2, name: "Ly", image: "image3", seen: false, loading: false, picShow: "image8"),
-        Post(id: 3, name: "Phuong", image: "image4", seen: false, loading: false, picShow: "image9"),
-        Post(id: 4, name: "Thanh", image: "image5", seen: false, loading: false, picShow: "image10"),
+        
+        Post(id: 0, name: "mot", image: "image1", seen: false, loading: false, picShow: "image6"),
+        Post(id: 1, name: "hai", image: "image2", seen: false, loading: false, picShow: "image7"),
+        Post(id: 2, name: "ba", image: "image3", seen: false, loading: false, picShow: "image8"),
+        Post(id: 3, name: "bon", image: "image4", seen: false, loading: false, picShow: "image9"),
+        Post(id: 4, name: "nam", image: "image5", seen: false, loading: false, picShow: "image10"),
         
     ]
     
@@ -34,51 +34,63 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         
-                        HStack(spacing: 22) {
-
-                            Button(action: {
-
-
-                            }) {
-                                ZStack(alignment: .bottomTrailing){
-
-                                    Image("image1").resizable().frame(width: 56, height: 56).clipShape(Circle())
-
-                                    Image("image10").resizable().frame(width: 12, height: 12).clipShape(Circle()).offset(x: 6)
+                        HStack {
+                            
+                            VStack {
+                                Button(action: {
+                                    
+                                    
+                                }) {
+                                    ZStack(alignment: .bottomTrailing){
+                                        
+                                        Image("image1").resizable().frame(width: 56, height: 56).clipShape(Circle())
+                                        
+                                        Button(action: {}) {
+                                            
+                                            Image(systemName: "plus")
+                                                .resizable()
+                                                .frame(width: 12, height: 12)
+                                                .foregroundColor(.white)
+                                                .padding(.all, 5)
+                                        }
+                                        .background(Color.blue)
+                                        .clipShape(Circle())
+                                        .offset(x: 3)
+                                    }
                                 }
+                                
+                                TextCommon(text: "Tin của bạn", color: Color.gray)
                             }
                             
                             ForEach(0..<self.data.count ){ i in
-
-                                VStack (spacing: 8) {
+                                
+                                VStack {
                                     
                                     ZStack {
                                         
                                         Image(self.data[i].image)
-                                                .resizable()
-                                                .frame(width: 65, height: 65)
+                                            .resizable()
+                                            .frame(width: 60, height: 60)
                                             .clipShape(Circle())
-                                            .padding()
-                                           
+                                            
+                                            
+                                        
                                         if( !self.data[i].seen) {
                                             
                                             Circle()
-                                                .trim(from: 0, to: 1)
+                                                .trim(from: 0, to: 2)
                                                 .stroke(
                                                     AngularGradient(
-                                                        gradient: .init(colors: [.red, .orange, .red]),
+                                                        gradient: .init(colors: [.yellow, .orange, .red]),
                                                         center: .center),
-                                                    style: StrokeStyle(lineWidth: 4, dash: [self.data[i].loading ? 7 : 0]))
-                                                .frame(width: 75, height: 75)
+                                                    style: StrokeStyle(lineWidth: 4, dash: [self.data[i].loading ? 4 : 0]))
+                                                .frame(width: 56, height: 56)
                                                 .rotationEffect(.init(degrees: self.data[i].loading ? 360 : 0))
                                         }
                                     }
                                     
-                                    Text(self.data[i].name)
-                                        .foregroundColor(.black)
-                                        .lineLimit(1)
+                                    TextCommon(text: self.data[i].name, color: Color.black)
                                 }
-                                .frame(width: 75)
                                 .onTapGesture {
                                     
                                     withAnimation(Animation.default.speed(0.4).repeatForever(autoreverses: false)) {
@@ -97,8 +109,8 @@ struct HomeView: View {
                             }
                         }
                     }
-                    .padding(.horizontal)
-                    .padding(.top)
+                    .padding(.top, 8)
+
                     
                     Spacer()
                 }
@@ -143,14 +155,14 @@ struct ShowStory: View {
     var body: some View {
         
         ZStack (alignment: .topLeading) {
-        
+            
             GeometryReader {_ in
                 
                 VStack (alignment: .center) {
                     
                     Image(self.current.picShow)
                         .resizable()
-                        
+                    
                 }
             }
             
@@ -165,7 +177,7 @@ struct ShowStory: View {
                     
                     Text(self.current.name)
                         .foregroundColor(.white)
-                                            
+                    
                     Spacer()
                 }
                 .padding(.leading)

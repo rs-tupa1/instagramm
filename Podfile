@@ -6,14 +6,7 @@ target 'instagramm' do
   use_frameworks!
 
   # Pods for instagramm
-
-  target 'instagrammTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'instagrammUITests' do
-    # Pods for testing
-  end
+  
+  pod 'Alamofire', '~> 5.5'
 
 end

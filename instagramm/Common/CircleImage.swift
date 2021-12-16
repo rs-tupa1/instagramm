@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct CircleImage: View {
+    var image: String
+    var isIcon: Bool = false
+    
     var body: some View {
-        Image("image").clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).overlay(Circle().stroke(lineWidth: 4))
-            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct CircleImage_Previews: PreviewProvider {
-    static var previews: some View {
-        CircleImage()
+        
+        Group {
+            if isIcon {
+                Image(systemName: image)
+            } else {
+                Image(image)
+            }
+        }
+        .frame(width: 60, height: 60)
+        .clipShape(Circle())
     }
 }
