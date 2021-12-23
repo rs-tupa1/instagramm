@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		673DCB0D3391C4A5861749B3 /* Pods_instagramm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799FFCB8DDD41CA428081485 /* Pods_instagramm.framework */; };
+		751E76E5277413390039282E /* ListDataHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E76E4277413390039282E /* ListDataHomeView.swift */; };
+		75C194EC27745BD600163AC5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C194EB27745BD600163AC5 /* HomeViewModel.swift */; };
+		75C194EF27745CA100163AC5 /* ShowStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C194EE27745CA100163AC5 /* ShowStory.swift */; };
+		75C194F22774685600163AC5 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C194F12774685600163AC5 /* AccountView.swift */; };
+		75FAF93B27745A9F0095A649 /* StoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FAF93A27745A9F0095A649 /* StoryHomeView.swift */; };
 		BF49BCD027684A240043E67C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49BCCF27684A240043E67C /* Constant.swift */; };
 		BF49BCD527684BD90043E67C /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49BCD427684BD90043E67C /* AppStyles.swift */; };
 		BF49BCE22768962D0043E67C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49BCE12768962D0043E67C /* LoginViewModel.swift */; };
@@ -26,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751E76E4277413390039282E /* ListDataHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataHomeView.swift; sourceTree = "<group>"; };
+		75C194EB27745BD600163AC5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		75C194EE27745CA100163AC5 /* ShowStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStory.swift; sourceTree = "<group>"; };
+		75C194F12774685600163AC5 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		75FAF93A27745A9F0095A649 /* StoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeView.swift; sourceTree = "<group>"; };
 		799FFCB8DDD41CA428081485 /* Pods_instagramm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F083EBD025573521407DF1 /* Pods-instagramm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramm.release.xcconfig"; path = "Target Support Files/Pods-instagramm/Pods-instagramm.release.xcconfig"; sourceTree = "<group>"; };
 		BF49BCCF27684A240043E67C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -66,6 +76,33 @@
 				799FFCB8DDD41CA428081485 /* Pods_instagramm.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		751E76E3277413010039282E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				751E76E4277413390039282E /* ListDataHomeView.swift */,
+				75FAF93A27745A9F0095A649 /* StoryHomeView.swift */,
+				75C194EE27745CA100163AC5 /* ShowStory.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		75C194ED27745C5600163AC5 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				751E76E3277413010039282E /* Component */,
+				BFCC1F602766F7B100EB84F9 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		75C194F02774683E00163AC5 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				75C194F12774685600163AC5 /* AccountView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		BAC33B55D2801E4CBBFFA1DB /* Pods */ = {
@@ -143,6 +180,7 @@
 			children = (
 				BFCC1F432766EFA200EB84F9 /* ValidateViewModel.swift */,
 				BF49BCE12768962D0043E67C /* LoginViewModel.swift */,
+				75C194EB27745BD600163AC5 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,7 +188,8 @@
 		BFCC1F442766EFA200EB84F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BFCC1F602766F7B100EB84F9 /* HomeView.swift */,
+				75C194F02774683E00163AC5 /* Account */,
+				75C194ED27745C5600163AC5 /* HomeView */,
 				BFCC1F452766EFA200EB84F9 /* DashboardView.swift */,
 				BFCC1F462766EFA200EB84F9 /* SignUpView.swift */,
 				BFCC1F472766EFA200EB84F9 /* LoginView.swift */,
@@ -273,13 +312,18 @@
 			files = (
 				BFCC1F492766EFA200EB84F9 /* ValidateViewModel.swift in Sources */,
 				BF49BCE22768962D0043E67C /* LoginViewModel.swift in Sources */,
+				75C194EF27745CA100163AC5 /* ShowStory.swift in Sources */,
 				BFCC1F5C2766F76C00EB84F9 /* MapView.swift in Sources */,
+				75C194EC27745BD600163AC5 /* HomeViewModel.swift in Sources */,
 				BF4DD396276B372E00F0B683 /* ImagePicker.swift in Sources */,
+				75C194F22774685600163AC5 /* AccountView.swift in Sources */,
 				BFCC1F482766EFA200EB84F9 /* Common.swift in Sources */,
 				BFCC1F4A2766EFA200EB84F9 /* DashboardView.swift in Sources */,
 				BFCC1F612766F7B100EB84F9 /* HomeView.swift in Sources */,
 				BFCC1F102766EF2F00EB84F9 /* instagrammApp.swift in Sources */,
 				BF49BCD527684BD90043E67C /* AppStyles.swift in Sources */,
+				751E76E5277413390039282E /* ListDataHomeView.swift in Sources */,
+				75FAF93B27745A9F0095A649 /* StoryHomeView.swift in Sources */,
 				BF49BCD027684A240043E67C /* Constant.swift in Sources */,
 				BFCC1F4B2766EFA200EB84F9 /* SignUpView.swift in Sources */,
 				BF49BCE92769CBBB0043E67C /* APIService.swift in Sources */,

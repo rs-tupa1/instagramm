@@ -11,28 +11,13 @@ struct Dashboard: View {
     
     @State var selectedIndex = 0
     
-    let tabBarImageNameSelected = ["home_selected", "search_selected", "like_selected", "profile_selected"]
+    let tabBarImageNameSelected = [ConstantAsset.home_selected, ConstantAsset.search_selected, ConstantAsset.like_selected, ConstantAsset.profile_selected]
     
-    let tabBarImageNameUnSelected = ["home_unselected", "search_unselected", "like_unselected", "profile_unselected"]
+    let tabBarImageNameUnSelected = [ConstantAsset.home_unselected, ConstantAsset.search_unselected, ConstantAsset.like_unselected, ConstantAsset.profile_unselected]
     
     var body: some View {
         
         VStack {
-            
-            HStack (spacing: 16) {
-                
-                Image("Instagram_logo_white-1")
-                    .renderingMode(.template)
-                    .foregroundColor(.black)
-                
-                Spacer()
-                
-                Image("plus_unselected")
-                
-                Image(systemName: "message")
-            }
-            .padding(.horizontal, 16)
-            
             ZStack {
                 
                 switch selectedIndex {
@@ -43,7 +28,7 @@ struct Dashboard: View {
                 case 2:
                     Color.green.edgesIgnoringSafeArea(.top)
                 case 3:
-                    Color.blue.edgesIgnoringSafeArea(.top)
+                    AccountView()
                     
                 default:
                     Color.white.edgesIgnoringSafeArea(.top)
