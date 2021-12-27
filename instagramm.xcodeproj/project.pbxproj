@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		673DCB0D3391C4A5861749B3 /* Pods_instagramm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799FFCB8DDD41CA428081485 /* Pods_instagramm.framework */; };
 		751E76E5277413390039282E /* ListDataHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E76E4277413390039282E /* ListDataHomeView.swift */; };
+		7560FF112779760300E0084E /* ButtonAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560FF102779760300E0084E /* ButtonAdd.swift */; };
 		75C194EC27745BD600163AC5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C194EB27745BD600163AC5 /* HomeViewModel.swift */; };
 		75C194EF27745CA100163AC5 /* ShowStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C194EE27745CA100163AC5 /* ShowStory.swift */; };
 		75C194F22774685600163AC5 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C194F12774685600163AC5 /* AccountView.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		751E76E4277413390039282E /* ListDataHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataHomeView.swift; sourceTree = "<group>"; };
+		7560FF102779760300E0084E /* ButtonAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAdd.swift; sourceTree = "<group>"; };
 		75C194EB27745BD600163AC5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		75C194EE27745CA100163AC5 /* ShowStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStory.swift; sourceTree = "<group>"; };
 		75C194F12774685600163AC5 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				BFCC1F412766EFA200EB84F9 /* Common.swift */,
 				BF49BCCF27684A240043E67C /* Constant.swift */,
 				BF49BCD427684BD90043E67C /* AppStyles.swift */,
+				7560FF102779760300E0084E /* ButtonAdd.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				BFCC1F492766EFA200EB84F9 /* ValidateViewModel.swift in Sources */,
 				BF49BCE22768962D0043E67C /* LoginViewModel.swift in Sources */,
 				75C194EF27745CA100163AC5 /* ShowStory.swift in Sources */,
+				7560FF112779760300E0084E /* ButtonAdd.swift in Sources */,
 				BFCC1F5C2766F76C00EB84F9 /* MapView.swift in Sources */,
 				75C194EC27745BD600163AC5 /* HomeViewModel.swift in Sources */,
 				BF4DD396276B372E00F0B683 /* ImagePicker.swift in Sources */,

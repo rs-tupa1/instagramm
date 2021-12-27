@@ -26,17 +26,7 @@ struct StoryHomeView: View {
                             
                             Image(ConstantAsset.image1).resizable().frame(width: 56, height: 56).clipShape(Circle())
                             
-                            Button(action: {}) {
-                                
-                                Image(systemName: ConstantAsset.plus)
-                                    .resizable()
-                                    .frame(width: 12, height: 12)
-                                    .foregroundColor(.white)
-                                    .padding(.all, 5)
-                            }
-                            .background(Color.blue)
-                            .clipShape(Circle())
-                            .offset(x: 3)
+                            ButtonAdd(size: 12)
                         }
                     }
                     
