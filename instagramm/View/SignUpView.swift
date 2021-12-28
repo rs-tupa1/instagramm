@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct SignUpView: View {
     @StateObject private var loginState = LoginViewModel()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>

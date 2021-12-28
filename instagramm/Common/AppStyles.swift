@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextCommon: View {
     var text: String
-    var color: Color = Color.black
+    var color: Color = Color.white
     var size: Int = ConstantNumber.size14
     var fontWeight: Font.Weight = .medium
     

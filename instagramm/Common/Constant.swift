@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Foundation
+
+let imageNetwork = "https://picsum.photos/200"
 
 struct ConstantAsset {
     static let size14 = 14
@@ -13,8 +16,8 @@ struct ConstantAsset {
     static let comment = "comment"
     static let gear = "gear"
     static let grid = "grid"
-    static let home_selected = "home_selected"
-    static let home_unselected = "home_unselected"
+    static let home_selected = "house.fill"
+    static let home_unselected = "house"
     static let image = "image"
     static let image1 = "image1"
     static let image2 = "image1"
@@ -33,19 +36,21 @@ struct ConstantAsset {
     static let image15 = "image15"
     static let Instagram_logo_white_1 = "Instagram_logo_white-1"
     static let Instagram_logo_white = "Instagram_logo_white"
-    static let like_selected = "like_selected"
-    static let like_unselected = "like_unselected"
+    static let film = "film"
+    static let film_fill = "film.fill"
+    static let like_selected = "heart.fill"
+    static let like_unselected = "heart"
     static let list = "list"
     static let play = "play"
     static let plus_photo = "plus_photo"
     static let plus_unselected = "plus_unselected"
-    static let profile_selected = "profile_selected"
-    static let profile_unselected = "profile_unselected"
+    static let profile_selected = "person.circle.fill"
+    static let profile_unselected = "person.circle"
     static let ribbon = "ribbon"
     static let right_arrow_shadow = "right_arrow_shadow"
     static let save_shadow = "save_shadow"
-    static let search_selected = "search_selected"
-    static let search_unselected = "search_unselected"
+    static let search_selected = "magnifyingglass"
+    static let search_unselected = "magnifyingglass"
     static let send2 = "send2"
     static let upload_image_icon = "upload_image_icon"
     static let plus = "plus"
@@ -58,6 +63,7 @@ struct ConstantAsset {
     static let plus_square = "plus.square"
     static let line_3_horizontal = "line.3.horizontal"
     static let chevron_down = "chevron.down"
+    static let square_grid_3x3 = "square.grid.3x3"
 }
 
 struct ConstantString {
@@ -90,16 +96,16 @@ struct ConstantNumber {
 
 struct DataSimple {
     static let data = [
-        Post(id: 0, name: "mot", image: "image1", seen: false, loading: false, picShow: "image6"),
-        Post(id: 1, name: "hai", image: "image2", seen: false, loading: false, picShow: "image7"),
-        Post(id: 2, name: "ba", image: "image3", seen: false, loading: false, picShow: "image8"),
-        Post(id: 3, name: "bon", image: "image4", seen: false, loading: false, picShow: "image9"),
-        Post(id: 4, name: "nam", image: "image5", seen: false, loading: false, picShow: "image10"),
-        Post(id: 5, name: "nam", image: "image6", seen: false, loading: false, picShow: "image1"),
-        Post(id: 6, name: "sau", image: "image7", seen: false, loading: false, picShow: "image2"),
-        Post(id: 7, name: "bay", image: "image8", seen: false, loading: false, picShow: "image3"),
-        Post(id: 8, name: "tam", image: "image9", seen: false, loading: false, picShow: "image4"),
-        Post(id: 9, name: "chin", image: "image10", seen: false, loading: false, picShow: "image5"),
+        Post(id: 0, name: "mot", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 1, name: "hai", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 2, name: "ba", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 3, name: "bon", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 4, name: "nam", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 5, name: "nam", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 6, name: "sau", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 7, name: "bay", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 8, name: "tam", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
+        Post(id: 9, name: "chin", image: imageNetwork, seen: false, loading: false, picShow: imageNetwork),
         
     ]
 }

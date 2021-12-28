@@ -14,17 +14,17 @@ class HomeViewModel: ObservableObject {
     @Published var data = DataSimple.data
     
     
-    func isSelectedStory(indexCurrent: Int) {
+    func isSelectedStory(id: Int) {
         withAnimation(Animation.default.speed(0.4).repeatForever(autoreverses: false)) {
             
-            data[indexCurrent].loading.toggle()
+            data[id].loading.toggle()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + (data[indexCurrent].seen ? 0 : 1.2)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + (data[id].seen ? 0 : 1.2)) {
                 
-                self.current = self.data[indexCurrent]
+                self.current = self.data[id]
                 self.show.toggle()
-                self.data[indexCurrent].loading = false
-                self.data[indexCurrent].seen = true
+                self.data[id].loading = false
+                self.data[id].seen = true
             }
         }
     }

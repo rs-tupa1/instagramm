@@ -70,16 +70,18 @@ struct AccountView: View {
                         .cornerRadius(5)
                     }
                     
-//                    HStack {
-//                        Group {
-//                            Button (action: {}) {
-//                                Image(systemName: ConstantAsset.chevron_down)
-//                                    .foregroundColor(.black)
-//                            }
-//
-//                        }
-//                        .frame(maxWidth: .infinity, maxHeight: 45, alignment: .center)
-//                    }
+                    HStack {
+                        Group {
+                            Button (action: {}) {
+                                Image(systemName: ConstantAsset.square_grid_3x3)
+                                    .foregroundColor(.black)
+                            }
+                            .border(.black, width: 1)
+                            
+
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: 45, alignment: .center)
+                    }
                 }
                 .padding(.all, 10)
             }
@@ -87,6 +89,7 @@ struct AccountView: View {
         }
     }
 }
+
 
 struct ColumnText: View {
     var title: String
@@ -99,5 +102,19 @@ struct ColumnText: View {
             TextCommon(text: title)
         }
         .padding(.trailing, 10)
+    }
+}
+
+struct ButtonPost: View {
+    var icon: String
+    var action: (() -> Void)
+    var isSelected: Bool
+    
+    var body: some View {
+        Button (action: {}) {
+            Image(systemName: icon)
+                .foregroundColor(isSelected ? .black : .gray)
+        }
+        .border(isSelected ? .black : .gray, width: isSelected ? 1 : 0.5)
     }
 }

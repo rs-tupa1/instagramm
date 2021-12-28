@@ -7,44 +7,27 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct ShowStory: View {
     var current: Post!
     
     var body: some View {
         
-        ZStack (alignment: .topLeading) {
+        VStack (alignment: .center,spacing: 15) {
             
-            GeometryReader {_ in
-                
-                VStack {
-                    
-                    Spacer()
-                    
-                    Image(self.current.picShow)
-                        .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: 500)
-                    
-                    Spacer()
-                    
-                }
+            HStack (spacing: 15) {
+                ImageNetwork(urlImage: self.current.image, width: 55, height: 55)
+                    .clipShape(Circle())
+                TextCommon(text: self.current.name)
+                Spacer()
             }
+            .padding(.leading)
             
-            VStack (spacing: 15) {
-                
-                HStack (spacing: 15) {
-                    
-                    Image(self.current.image)
-                        .resizable()
-                        .frame(width: 55, height: 55)
-                        .clipShape(Circle())
-                    
-                    TextCommon(text: self.current.name)
-                    
-                    Spacer()
-                }
-                .padding(.leading)
-            }
-            .padding(.top)
+            Spacer()
+            ImageNetwork(urlImage: self.current.picShow, width: .infinity, height: .infinity)
+            Spacer()
         }
+        .padding(.top)
+        .background(Color.black)
     }
 }

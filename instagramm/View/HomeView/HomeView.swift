@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+@available(iOS 15.0, *)
 struct HomeView: View {
     @StateObject private var homeState = HomeViewModel()
     
@@ -21,12 +22,16 @@ struct HomeView: View {
                         
                         Image(ConstantAsset.Instagram_logo_white_1)
                             .renderingMode(.template)
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                         Spacer()
-                        Image(ConstantAsset.plus_unselected)
+                        Image(systemName: ConstantAsset.plus_square)
+                            .foregroundColor(.white)
                         Image(systemName: ConstantAsset.message)
+                            .foregroundColor(.white)
                     }
                     .padding(.horizontal, 16)
+                    .background(Color.white.opacity(0.05))
+                    
                     ScrollView {
                         StoryHomeView(data: homeState.data, isSelected: homeState.isSelectedStory)
                         Divider()
@@ -51,7 +56,7 @@ struct HomeView: View {
                 }
             }
             .navigationBarHidden(true)
-            
+            .background(Color.black)
         }
     }
 }

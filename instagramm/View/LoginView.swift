@@ -8,6 +8,8 @@
 import SwiftUI
 import Combine
 
+@available(iOS 15.0, *)
+@available(iOS 15.0, *)
 struct LoginView: View {
     @StateObject private var loginState = LoginViewModel()
     @State private var isActive: Bool = false

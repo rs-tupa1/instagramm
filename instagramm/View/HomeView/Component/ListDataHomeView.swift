@@ -8,40 +8,36 @@
 import SwiftUI
 
 
+@available(iOS 15.0, *)
 struct ListDataHomeView: View {
     
     var body: some View {
         
-        ForEach(DataSimple.data) {i in
-            ItemNews(title: i.name, image: i.image)
+        ForEach(0..<100) {_ in
+            ItemNews(title: imageNetwork, image: imageNetwork)
         }
     }
 }
 
+@available(iOS 15.0, *)
 struct ItemNews: View {
     var title: String
     var image: String
     
     var body: some View {
-        VStack {
+        VStack (alignment: .leading) {
             HStack (spacing: 10) {
-                Image(ConstantAsset.image1)
-                    .resizable()
-                    .frame(width: 20, height: 20)
+                ImageNetwork(urlImage: image, width: 35, height: 35)
                     .clipShape(Circle())
-                
                 TextCommon(text: title)
                 
                 Spacer()
-                
                 Image(systemName: ConstantAsset.ellipsis)
                     .frame(width: 14, height: 14)
             }
             .padding(.all, 10)
             
-            Image(image)
-                .resizable()
-                .frame(maxWidth: .infinity, maxHeight: 400)
+            ImageNetwork(urlImage: image, width: .infinity, height: 600)
             
             HStack (spacing: 16) {
                 ItemIcon(icon: ConstantAsset.heart)
@@ -52,6 +48,8 @@ struct ItemNews: View {
                 ItemIcon(icon: ConstantAsset.bookmark)
             }
             .padding(.all, 10)
+            
+            ContentStatus(name: "abc", content: "dnjasjdnjasjndsjand", listLiker: ["d", "d"])
         }
     }
 }
@@ -62,6 +60,25 @@ struct ItemIcon: View {
     var body: some View {
         Image(systemName: icon)
             .frame(width: 16, height: 16)
-            .foregroundColor(.black)
+            .foregroundColor(.white)
+    }
+}
+
+struct ContentStatus: View {
+    var name: String
+    var content: String
+    var listLiker: [String]
+    
+    var body: some View {
+        
+        VStack(alignment: .leading) {
+            TextCommon(text: name)
+            TextCommon(text: content)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.bottom, 5)
+            TextCommon(text: "\(listLiker.joined(separator: ",")) others liked")
+            
+        }
+        .padding(.leading, 10)
     }
 }
