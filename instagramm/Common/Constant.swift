@@ -64,6 +64,7 @@ struct ConstantAsset {
     static let line_3_horizontal = "line.3.horizontal"
     static let chevron_down = "chevron.down"
     static let square_grid_3x3 = "square.grid.3x3"
+    static let multiply_circle_fill = "multiply.circle.fill"
 }
 
 struct ConstantString {

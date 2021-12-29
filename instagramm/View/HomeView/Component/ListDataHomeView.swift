@@ -14,7 +14,7 @@ struct ListDataHomeView: View {
     var body: some View {
         
         ForEach(0..<100) {_ in
-            ItemNews(title: imageNetwork, image: imageNetwork)
+            ItemNews(title: "admin", image: imageNetwork)
         }
     }
 }
@@ -49,8 +49,18 @@ struct ItemNews: View {
             }
             .padding(.all, 10)
             
-            ContentStatus(name: "abc", content: "dnjasjdnjasjndsjand", listLiker: ["d", "d"])
+            ContentStatus(name: "abc", content: buildContent(content: content), listLiker: ["d", "d"])
         }
+    }
+    
+    func buildContent(content: String) -> String {
+        var buildContent = content
+        if content.count < 50 {
+            return content
+        }
+        buildContent
+            .replaceSubrange(...content.index(content.startIndex, offsetBy: 100), with: "...")
+        return buildContent
     }
 }
 
@@ -82,3 +92,5 @@ struct ContentStatus: View {
         .padding(.leading, 10)
     }
 }
+
+let content = "dnjasjdnjasjndsjandjdnsjndnsnsdndsdssdnndsdkdsamkdskmdskmdkmasdkmskdmasdakmsadmskdmksadkmskmdsamdkdmksdkmdamksamdksskmddsakmadmkadskmdkmdkmdaskmkmdmkasmdkasmkdkaskmmldnjkgwjnefjewunsdsjdjdsjndnsjndjsdnsjsdnjdsnjndsjdsnjsdnj"

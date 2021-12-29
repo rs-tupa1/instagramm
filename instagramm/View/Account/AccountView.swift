@@ -61,13 +61,11 @@ struct AccountView: View {
                             
                             Button (action: {}) {
                                 Image(systemName: ConstantAsset.chevron_down)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                             }
                             .frame(width: 30, height: 30, alignment: .center)
-                            
                         }
                         .border(.gray, width: 1)
-                        .cornerRadius(5)
                     }
                     
                     HStack {
@@ -85,6 +83,7 @@ struct AccountView: View {
                 }
                 .padding(.all, 10)
             }
+            .background(Color.black)
             .navigationBarHidden(true)
         }
     }

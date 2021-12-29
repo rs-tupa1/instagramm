@@ -40,9 +40,7 @@ struct StoryHomeView: View {
                 }
                 
                 ForEach(self.data){ data in
-                    
                     VStack {
-                        
                         ZStack {
                             AsyncImage(url: URL(string: data.image), scale: 1)
                                 .frame(width: 60, height: 60)

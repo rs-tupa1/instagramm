@@ -29,9 +29,9 @@ struct Dashboard: View {
                     case 0:
                         HomeView()
                     case 1:
-                        Color.black.edgesIgnoringSafeArea(.top)
+                        SearchView()
                     case 2:
-                        Color.green.edgesIgnoringSafeArea(.top)
+                        ShortVideoView()
                     case 3:
                         Color.green.edgesIgnoringSafeArea(.top)
                     case 4:

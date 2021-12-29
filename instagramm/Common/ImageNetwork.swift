@@ -22,6 +22,7 @@ struct ImageNetwork: View {
         } placeholder: {
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                .frame(maxWidth: width, maxHeight: height)
         }
     }
 }
